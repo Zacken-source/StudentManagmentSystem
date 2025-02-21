@@ -13,7 +13,7 @@ public class Student {
         this.name = "John";
         this.studentId = 0;
         this.age = 10;
-        this.grades = new ArrayList<Integer>(Arrays.asList(13, 15, 14));
+        this.grades = new ArrayList<Integer>(Arrays.asList(10, 20, 15));
     }
 
     public Student(String name, int studentId, int age) {
@@ -22,7 +22,6 @@ public class Student {
         this.age = age;
         this.grades = new ArrayList<>();
     }
-
 
     public void addGrade(Integer grade) {
         grades.add(grade);

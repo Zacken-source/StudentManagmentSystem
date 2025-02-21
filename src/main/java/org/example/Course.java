@@ -6,7 +6,7 @@ public class Course {
     private String courseName;
     private int courseCode;
     private int creditHours;
-    private ArrayList<Object> students;
+    private ArrayList<Student> students;
 
 
     public void Course (){
@@ -27,7 +27,7 @@ public class Course {
         this.students.add(student);
     }
 
-    public ArrayList<Object> getEnrollStudents(){
+    public ArrayList<Student> getEnrollStudents(){
         return students;
     }
 

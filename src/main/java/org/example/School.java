@@ -6,6 +6,7 @@ public class School {
     private ArrayList<Course> courses;
 
 
+
     public School(){
         this.courses = new ArrayList<>();
         this.courses.add(new Course());
