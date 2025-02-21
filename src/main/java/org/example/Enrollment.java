@@ -9,7 +9,4 @@ public class Enrollment {
         this.course = course;
     }
 
-    public void getEnrollment(){
-        System.out.println(course);
-    }
 }

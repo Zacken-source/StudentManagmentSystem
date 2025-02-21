@@ -1,17 +1,24 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Student {
     private String name;
-    private int studentId;
+    private int studentId = 0;
     private int age;
-    private ArrayList<Integer> grades;
+    private  ArrayList<Integer> grades;
 
+    public Student() {
+        this.name = "John";
+        this.studentId = 0;
+        this.age = 10;
+        this.grades = new ArrayList<Integer>(Arrays.asList(13, 15, 14));
+    }
 
     public Student(String name, int studentId, int age) {
         this.name = name;
-        this.studentId = studentId;
+        this.studentId = 1;
         this.age = age;
         this.grades = new ArrayList<>();
     }
