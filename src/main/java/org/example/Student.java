@@ -1,67 +1,37 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class Student {
-    private String name;
-    private int studentId = 0;
-    private int age;
-    private  ArrayList<Integer> grades;
+import lombok.Getter;
 
-    public Student() {
-        this.name = "John";
-        this.studentId = 0;
-        this.age = 10;
-        this.grades = new ArrayList<Integer>(Arrays.asList(10, 20, 15));
-    }
+@Getter
+abstract class Student extends Person {
+    protected int studentId;
+    protected ArrayList<Float> grades = new ArrayList<>();
 
     public Student(String name, int studentId, int age) {
-        this.name = name;
-        this.studentId = 1;
-        this.age = age;
-        this.grades = new ArrayList<>();
+        super(name, age);
+        this.studentId = studentId;
     }
 
-    public void addGrade(Integer grade) {
+    //add new grade
+    public void addGrade(Float grade) {
         grades.add(grade);
     }
 
+    // abstract average method
+    public abstract Float getAverageGrade();
 
-    public double getAverageGrade() {
-        if (grades.isEmpty()) {
-            return 0.0;
-        }
-        int sum = 0;
-        for (int grade : grades) {
-            sum += grade;
-        }
-        return (double) sum / grades.size();
-    }
-
-    public void StrudentInfo() {
+    @Override
+    public void printStudentInfo() {
         System.out.println("Nom : " + name);
         System.out.println("ID : " + studentId);
         System.out.println("Âge : " + age);
         System.out.println("Moyenne des notes : " + getAverageGrade());
     }
 
-    public void setName(String name){
-        this.name = name;
-    }
-    public String getName(){
-        return name;
-    }
-    public void setStudentId(int studentId){
+    public void setStudentId(int studentId) {
         this.studentId = studentId;
     }
-    public int getStudentId(){
-        return studentId;
-    }
-    public void setAge(int age){
-        this.age = age;
-    }
-    public int getAge(){
-        return age;
-    }
+
 }

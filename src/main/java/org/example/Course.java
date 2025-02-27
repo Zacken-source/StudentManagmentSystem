@@ -1,34 +1,29 @@
 package org.example;
 
 import java.util.ArrayList;
+import lombok.Getter;
 
-public class Course {
+@Getter
+public class Course{
     private String courseName;
     private int courseCode;
     private int creditHours;
-    private ArrayList<Student> students;
+    private ArrayList<Student> students = new ArrayList<>();
 
-
-    public void Course (){
-        this.courseName = "POO";
-        this.courseCode = 1;
-        this.creditHours = 14;
-        this.students.add(new Student());
-    }
-    public void Course (String courseName, int courseCode, int creditHours){
+    // Constructor to initialize a course with a name, course code, and credit hours
+    public Course (String courseName, int courseCode, int creditHours){
         this.courseName = courseName;
         this.courseCode = courseCode;
         this.creditHours = creditHours;
-        this.students.add(new Student());
     }
 
-
+    // Enrolls a student in the course by adding them to the student list
     public void enrollStudent(Student student){
         this.students.add(student);
     }
 
-    public ArrayList<Student> getEnrollStudents(){
-        return students;
+    public void setCourseCode(int courseCode) {
+        this.courseCode = courseCode;
     }
 
 }
