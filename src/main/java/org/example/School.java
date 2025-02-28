@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public class School {
     private ArrayList<Course> courses;
     private String name;
-    public int nbStudents = 0;
 
     // Constructor: Initializes a school with name
     public School(String name){

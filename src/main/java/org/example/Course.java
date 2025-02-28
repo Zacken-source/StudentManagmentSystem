@@ -2,10 +2,12 @@ package org.example;
 
 import java.util.ArrayList;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 public class Course{
     private String courseName;
+    @Setter
     private int courseCode;
     private int creditHours;
     private ArrayList<Student> students = new ArrayList<>();
@@ -20,10 +22,6 @@ public class Course{
     // Enrolls a student in the course by adding them to the student list
     public void enrollStudent(Student student){
         this.students.add(student);
-    }
-
-    public void setCourseCode(int courseCode) {
-        this.courseCode = courseCode;
     }
 
 }
